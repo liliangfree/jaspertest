@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="holescanreport" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5c8947b4-fd1e-46e8-9bba-89063421fa8b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="dm1zX3Rlc3QgLDE1LDE1LDI1MTg3ODkxLWJkMzUtNDI2YS1hZGM4LTlkYWE5YWYxMmFiNjs="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<subDataset name="Dataset2" uuid="7b3d9d39-0b4b-4968-a908-7a83ff8c6f77">
+		<property name="com.jaspersoft.studio.data.sql.tables">
+			<![CDATA[dm1zX3Rlc3QgLDE1LDE1LGRhZGNkMjAyLWVhYTQtNDY0My1iMGVlLWViMWRhZTU4OTE2NDs=
+]]>
+		</property>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+		<parameter name="num" class="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT *
+FROM vms_test
+WHERE 
+	 vms_test.taskid = $P{num}]]>
+		</queryString>
+		<field name="低危漏洞" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.label" value="低危漏洞"/>
+		</field>
+		<field name="中危漏洞" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.label" value="中危漏洞"/>
+		</field>
+		<field name="高危漏洞" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.label" value="高危漏洞"/>
+		</field>
+	</subDataset>
+	<subDataset name="Dataset1" uuid="042c6dad-3df3-4c78-9795-ddb3fcc685df">
+		<property name="com.jaspersoft.studio.data.sql.tables" value="dm1zX3Jpc2sgLDE1LDE1LGNjZTE5YmU1LWRhMGEtNDYxYy1hNWZlLTk1YmQwZWQzZDU0Zjs="/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM vms_risk]]>
+		</queryString>
+		<field name="name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="vms_web_hole_history"/>
+		</field>
+		<field name="risk" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="risk"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="vms_web_hole_history"/>
+		</field>
+		<field name="num" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.label" value="num"/>
+		</field>
+		<group name="name">
+			<groupExpression><![CDATA[$F{name}]]></groupExpression>
+		</group>
+		<group name="risk">
+			<groupExpression><![CDATA[$F{risk}]]></groupExpression>
+		</group>
+		<group name="num">
+			<groupExpression><![CDATA[$F{num}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="Dataset3" uuid="3e24a139-5053-464c-95e7-ba2349bacbf3">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+		<parameter name="nm" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT *
+FROM vms_web_hole_history
+where taskid=$P{nm}]]>
+		</queryString>
+		<field name="riskurl" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="riskurl"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="vms_web_hole_history"/>
+		</field>
+		<field name="cve" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="cve"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="vms_web_hole_history"/>
+		</field>
+		<field name="name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="vms_web_hole_history"/>
+		</field>
+		<field name="description" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="description"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="vms_web_hole_history"/>
+		</field>
+		<field name="solution" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="solution"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="vms_web_hole_history"/>
+		</field>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM vms_test]]>
+	</queryString>
+	<field name="低危漏洞" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="低危漏洞"/>
+	</field>
+	<field name="中危漏洞" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="中危漏洞"/>
+	</field>
+	<field name="高危漏洞" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="高危漏洞"/>
+	</field>
+	<group name="低危漏洞">
+		<groupExpression><![CDATA[$F{低危漏洞}]]></groupExpression>
+	</group>
+	<group name="中危漏洞">
+		<groupExpression><![CDATA[$F{中危漏洞}]]></groupExpression>
+	</group>
+	<group name="高危漏洞">
+		<groupExpression><![CDATA[$F{高危漏洞}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="54" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="-18" width="554" height="66" backcolor="#006699" uuid="e976a574-8347-4cd4-8a6e-2b0447421f5d"/>
+				<staticText>
+					<reportElement x="22" y="11" width="234" height="43" forecolor="#FFFFFF" uuid="cdbbfcc4-e2cb-4460-a387-288307f55f1f"/>
+					<textElement>
+						<font fontName="华文仿宋" size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[渗透测试报告]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<image>
+				<reportElement x="460" y="-1" width="103" height="51" uuid="600ad135-2344-4506-9861-88e2c1deeb49"/>
+				<imageExpression><![CDATA["C:/Users/lee/Pictures/ingeek.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="227" y="20" width="100" height="22" uuid="4b0e3796-6ee4-4940-96b3-fd4b9da1149e"/>
+				<textElement textAlignment="Center">
+					<font fontName="幼圆" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[渗透测试报告]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="220" splitType="Stretch">
+			<staticText>
+				<reportElement x="7" y="3" width="98" height="30" uuid="699b8b61-9753-4a79-ad94-2a685a7be37e"/>
+				<textElement>
+					<font fontName="仿宋" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[第1章 概述]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="39" width="94" height="14" uuid="f835a69e-0b59-40d9-8ed3-1bee7cc31edf"/>
+				<textElement>
+					<font fontName="仿宋" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.1测试目的]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="53" width="508" height="44" uuid="f038f79d-0672-4787-85fd-161a0456befa"/>
+				<textElement>
+					<font fontName="仿宋" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[     采用黑盒的方式，模拟黑客的入侵行为，对指定的网站应用系统进行安全漏洞扫描和利用测试。评估是否存在可以被攻击者真实利用的漏洞以及由此引起的风险大小，为制定相应的安全措施与解决方案提供实际的依据。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="99" width="94" height="14" uuid="570ef9db-c2ec-4381-81ef-cd8779800a59"/>
+				<textElement>
+					<font fontName="仿宋" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.2测试范围]]></text>
+			</staticText>
+			<image>
+				<reportElement x="34" y="120" width="260" height="40" uuid="1af60e60-1d8d-4979-a3c2-b94b5ab32e9f"/>
+				<imageExpression><![CDATA["C:/Users/lee/Pictures/9.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="24" y="193" width="228" height="18" uuid="e4921dc7-ba21-4c49-a2cb-416fbd989279"/>
+				<textElement textAlignment="Left">
+					<font fontName="仿宋" isBold="true"/>
+				</textElement>
+				<text><![CDATA[《OWASP Testing Guide》]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="169" width="94" height="14" uuid="46009bf7-2682-40e1-b50d-0fc8c5780195"/>
+				<textElement>
+					<font fontName="仿宋" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.3参考标准]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="219" width="550" height="1" uuid="97dea7bb-6130-4c2b-af31-7c506f669479"/>
+			</break>
+		</band>
+		<band height="463">
+			<staticText>
+				<reportElement x="9" y="0" width="126" height="30" uuid="32b8fbf3-2de6-4eb0-9701-d397eb117eb6"/>
+				<textElement>
+					<font fontName="仿宋" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[第2章 测试综述]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="54" width="460" height="46" uuid="6b9ff474-6a4e-43aa-a5c8-4332294ccc2e"/>
+				<textElement>
+					<font fontName="仿宋" isBold="true"/>
+				</textElement>
+				<text><![CDATA[    本次应用系统渗透测试对1个应用系统进行了测试，发现的安全漏洞共计22个，其中高风险的有22个，中风险的有0个，低风险的有0个。
+    通过统计分析，目前安全漏洞详细分布情况如下图所示：
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="30" width="108" height="14" uuid="a34a797b-adc5-4cc1-b1af-448ef203d835"/>
+				<textElement>
+					<font fontName="仿宋" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1安全漏洞分布情况]]></text>
+			</staticText>
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="174" y="120" width="200" height="200" uuid="a8a2a4fa-6093-42ed-ae67-50b8e700aeb3"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="Dataset2" uuid="6e9fccdf-5c79-4b9e-9834-6479043c9f42">
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["低危漏洞"]]></seriesExpression>
+						<categoryExpression><![CDATA["低危漏洞"]]></categoryExpression>
+						<valueExpression><![CDATA[$F{低危漏洞}]]></valueExpression>
+						<labelExpression><![CDATA["低危漏洞"]]></labelExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["中危漏洞"]]></seriesExpression>
+						<categoryExpression><![CDATA["中危漏洞"]]></categoryExpression>
+						<valueExpression><![CDATA[$F{中危漏洞}]]></valueExpression>
+						<labelExpression><![CDATA["中危漏洞"]]></labelExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["高危漏洞"]]></seriesExpression>
+						<categoryExpression><![CDATA["高危漏洞"]]></categoryExpression>
+						<valueExpression><![CDATA[$F{高危漏洞}]]></valueExpression>
+						<labelExpression><![CDATA["高危漏洞"]]></labelExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+			<staticText>
+				<reportElement x="232" y="322" width="100" height="20" uuid="66a118c0-eb4d-4f16-b482-698aee72a3ad"/>
+				<textElement>
+					<font fontName="华文仿宋" isBold="true"/>
+				</textElement>
+				<text><![CDATA[漏洞危险情况分布图]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="336" width="126" height="16" uuid="a3dc7e1b-8966-4962-b092-b1ca84f29561"/>
+				<textElement>
+					<font fontName="华文仿宋" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1安全漏洞分布情况]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="90" y="373" width="386" height="80" uuid="de120dc7-37ee-4ad3-a11c-3db30f0b833a">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="cbff1c4a-427e-4f01-8932-ab2d8a81c140">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="e21a52aa-18d2-4f21-aac9-d1b8d44d7119">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" uuid="15b782b5-2250-4870-9523-4eaaaac65c8e"/>
+								<box>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="仿宋" isBold="true"/>
+								</textElement>
+								<text><![CDATA[系统]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" uuid="e38a51c4-16b2-4854-a64b-2c8a72984fce"/>
+								<box>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="仿宋"/>
+								</textElement>
+								<text><![CDATA[测试]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="4851a024-fb16-4131-856b-19d63b52c835">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="30" uuid="2f852c6e-960a-44d0-977c-e436805c4ffe"/>
+								<box>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="仿宋" isBold="true"/>
+								</textElement>
+								<text><![CDATA[漏洞名称]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="30">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="30" uuid="0581e2f0-f591-4de3-a084-51fd9234578d"/>
+								<box>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="仿宋"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="a2b38b07-ccd2-4a7e-a76e-d673e14bf6e5">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="78d5bbe7-e1cc-4d3a-8573-3f46ea341409"/>
+								<box>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="仿宋"/>
+								</textElement>
+								<text><![CDATA[威胁来源]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="3bd1ec3e-43ed-4ce6-bce8-34c3aac87e45"/>
+								<box>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="仿宋"/>
+								</textElement>
+								<text><![CDATA[外部黑客]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="66" uuid="8adba909-21a0-4e01-8672-bcb324074951">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="66" height="30" uuid="ca513e26-5490-4e66-94fe-3596ccd27097"/>
+								<box>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="仿宋"/>
+								</textElement>
+								<text><![CDATA[危险等级]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="30">
+							<textField>
+								<reportElement x="0" y="0" width="66" height="30" uuid="2908309c-c8e4-405f-b5dc-84fb6656be24"/>
+								<box>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="仿宋"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{risk}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="66" uuid="3aadea99-ffde-4765-b9ec-5803256fff5f">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="66" height="30" uuid="1f482148-b213-4277-a13c-ea650631a818"/>
+								<box>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="仿宋"/>
+								</textElement>
+								<text><![CDATA[数量]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="30">
+							<textField>
+								<reportElement x="0" y="0" width="66" height="30" uuid="e6cdc7e4-1725-4471-b106-4abbb09db259"/>
+								<box>
+									<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center">
+									<font fontName="仿宋"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{num}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="394">
+			<componentElement>
+				<reportElement x="79" y="34" width="380" height="170" uuid="1e3d0747-aa0a-4b3c-9776-3a6f21b6de34"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Dataset3" uuid="af88452e-93bb-47a9-835f-6fb7ba50e389">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="170" width="380">
+						<staticText>
+							<reportElement x="19" y="5" width="71" height="15" uuid="81891d6a-8e0c-4fe4-838c-8fb21f887794"/>
+							<textElement>
+								<font fontName="仿宋" size="12" isBold="true"/>
+							</textElement>
+							<text><![CDATA[漏洞名称：]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="30" y="26" width="330" height="14" uuid="066c5204-f09e-439b-af84-7bce0f70a765"/>
+							<textElement>
+								<font fontName="仿宋"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="19" y="43" width="61" height="15" uuid="64b95990-9a03-4f6a-9e45-d656c152481a"/>
+							<textElement>
+								<font fontName="仿宋" isBold="true"/>
+							</textElement>
+							<text><![CDATA[url：]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="30" y="58" width="332" height="12" uuid="7e5d2085-e250-47a3-a7d4-462a1f9dea7f"/>
+							<textElement>
+								<font fontName="仿宋"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{riskurl}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="18" y="73" width="61" height="15" uuid="a1035b60-7287-4dd3-92a3-58ba81f3630e"/>
+							<textElement>
+								<font fontName="仿宋" isBold="true"/>
+							</textElement>
+							<text><![CDATA[详细描述：]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="30" y="89" width="330" height="21" uuid="9ca84b23-7e1e-4e25-aac5-2bf3a2ff4aca"/>
+							<textElement>
+								<font fontName="仿宋"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="19" y="111" width="61" height="13" uuid="48eba390-e773-4d39-85ca-4b2a298c3b95"/>
+							<textElement>
+								<font fontName="仿宋" isBold="true"/>
+							</textElement>
+							<text><![CDATA[解决方法：]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="31" y="131" width="330" height="19" uuid="46c0fc1b-8cf7-4ce0-8de1-118c318cd12a"/>
+							<textElement>
+								<font fontName="仿宋"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{solution}]]></textFieldExpression>
+						</textField>
+						<frame>
+							<reportElement x="10" y="1" width="361" height="159" uuid="ac63ebdc-c6a2-41e8-a75c-e9aac39f2972"/>
+							<box>
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</frame>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement x="15" y="0" width="126" height="30" uuid="183d4312-3c5a-49e2-8b68-8319c18373d7"/>
+				<textElement>
+					<font fontName="仿宋" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[第3章 漏洞详情]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="16" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="8" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</summary>
+</jasperReport>

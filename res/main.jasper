@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.4  -->
+<!-- 2015-08-21T14:03:07 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="main" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aec5b519-b625-41f6-a025-4d38559e41b0">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="fromDate" class="java.lang.String"/>
+    <parameter name="toDate" class="java.lang.String"/>
+    <parameter name="presentmentDate" class="java.lang.String"/>
+    <parameter name="clearingDate" class="java.lang.String"/>
+    <parameter name="totalPresented1" class="java.math.BigDecimal"/>
+    <parameter name="totalPending1" class="java.math.BigDecimal"/>
+    <parameter name="totalAccepted1" class="java.math.BigDecimal"/>
+    <parameter name="totalRejected1" class="java.math.BigDecimal"/>
+    <parameter name="totalError1" class="java.math.BigDecimal"/>
+    <parameter name="DataSource1" class="net.sf.jasperreports.engine.JRDataSource"/>
+    <parameter name="DataSource2" class="net.sf.jasperreports.engine.JRDataSource"/>
+    <parameter name="totalPresented2" class="java.math.BigDecimal"/>
+    <parameter name="totalPending2" class="java.math.BigDecimal"/>
+    <parameter name="totalAccepted2" class="java.math.BigDecimal"/>
+    <parameter name="totalRejected2" class="java.math.BigDecimal"/>
+    <parameter name="totalError2" class="java.math.BigDecimal"/>
+    <parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+    <group name="Group1">
+        <groupExpression><![CDATA[$V{PAGE_NUMBER}]]></groupExpression>
+        <groupFooter>
+            <band height="26">
+                <subreport>
+                    <reportElement x="0" y="4" width="802" height="20" uuid="886efada-a73b-4085-82e6-fd9bb9de79ee"/>
+                    <subreportParameter name="SUBREPORT_DIR">
+                        <subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+                    </subreportParameter>
+                    <subreportParameter name="totalPresented2">
+                        <subreportParameterExpression><![CDATA[$P{totalPresented2}]]></subreportParameterExpression>
+                    </subreportParameter>
+                    <subreportParameter name="totalPending2">
+                        <subreportParameterExpression><![CDATA[$P{totalPending2}]]></subreportParameterExpression>
+                    </subreportParameter>
+                    <subreportParameter name="totalAccepted2">
+                        <subreportParameterExpression><![CDATA[$P{totalAccepted2}]]></subreportParameterExpression>
+                    </subreportParameter>
+                    <subreportParameter name="totalRejected2">
+                        <subreportParameterExpression><![CDATA[$P{totalRejected2}]]></subreportParameterExpression>
+                    </subreportParameter>
+                    <subreportParameter name="totalError2">
+                        <subreportParameterExpression><![CDATA[$P{totalError2}]]></subreportParameterExpression>
+                    </subreportParameter>
+                    <dataSourceExpression><![CDATA[$P{DataSource2}]]></dataSourceExpression>
+                    <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "sub2.jasper"]]></subreportExpression>
+                </subreport>
+            </band>
+        </groupFooter>
+    </group>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="60" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="40" height="20" uuid="5b9f0876-dad0-41e7-964f-95e17721cdb8"/>
+                <text><![CDATA[Period :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="20" width="90" height="20" uuid="de730f40-cfcd-4cc9-a921-c15681b48d96"/>
+                <text><![CDATA[Presentment date :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="40" width="70" height="20" uuid="dd8bd899-66cb-473f-9c7e-662e90091eb8"/>
+                <text><![CDATA[Clearing date :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="261" y="0" width="280" height="20" uuid="31a859b9-73f6-4330-8980-2a372bd5d755"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Arial Black" isBold="true"/>
+                </textElement>
+                <text><![CDATA[China Citic Bank International]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="236" y="20" width="330" height="20" uuid="18aaca0c-0688-43f1-98e0-ac3dccadcd9c"/>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[e-Cheque Daily Activity Summary Report (Day D)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="658" y="0" width="52" height="20" uuid="bada66f8-be8d-408b-becd-dd92d197b8db"/>
+                <text><![CDATA[Print Date : ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="658" y="20" width="52" height="20" uuid="44c04286-222f-46ae-aac3-1b5796c79e0f"/>
+                <text><![CDATA[Print Time :]]></text>
+            </staticText>
+            <textField pattern="yyyy/MM/dd">
+                <reportElement x="710" y="0" width="92" height="20" uuid="e0e8ea12-b6d2-41f4-af36-665b3c5d8e84"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <textField pattern="HH:mm:ss">
+                <reportElement x="710" y="20" width="92" height="20" uuid="a0b2c790-5575-4187-9177-a3cea6256ccb"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="40" y="0" width="58" height="20" uuid="c57b5888-d7b7-42a0-babf-f5a2ce81f65b"/>
+                <textFieldExpression><![CDATA[$P{fromDate}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="99" y="0" width="10" height="20" uuid="c382e621-5fbe-4e30-8aa1-fb2dbc812e61"/>
+                <text><![CDATA[to]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="116" y="0" width="70" height="20" uuid="c7cdc348-898d-4d25-83db-22bbc5fa8784"/>
+                <textFieldExpression><![CDATA[$P{toDate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="90" y="20" width="60" height="20" uuid="965fe446-7d45-4767-8c24-2ccc8cfcd1f2"/>
+                <textFieldExpression><![CDATA[$P{presentmentDate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="70" y="40" width="70" height="20" uuid="7898321a-16f7-4efb-9c98-74d7309ccf14"/>
+                <textFieldExpression><![CDATA[$P{clearingDate}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="7" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="4" splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="22" splitType="Stretch">
+            <subreport>
+                <reportElement x="0" y="0" width="802" height="22" uuid="be070050-2281-4b30-bc69-662a6974868e"/>
+                <subreportParameter name="SUBREPORT_DIR">
+                    <subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+                </subreportParameter>
+                <subreportParameter name="totalPresented1">
+                    <subreportParameterExpression><![CDATA[$P{totalPresented1}]]></subreportParameterExpression>
+                </subreportParameter>
+                <subreportParameter name="totalPending1">
+                    <subreportParameterExpression><![CDATA[$P{totalPending1}]]></subreportParameterExpression>
+                </subreportParameter>
+                <subreportParameter name="totalAccepted1">
+                    <subreportParameterExpression><![CDATA[$P{totalAccepted1}]]></subreportParameterExpression>
+                </subreportParameter>
+                <subreportParameter name="totalRejected1">
+                    <subreportParameterExpression><![CDATA[$P{totalRejected1}]]></subreportParameterExpression>
+                </subreportParameter>
+                <subreportParameter name="totalError1">
+                    <subreportParameterExpression><![CDATA[$P{totalError1}]]></subreportParameterExpression>
+                </subreportParameter>
+                <dataSourceExpression><![CDATA[$P{DataSource1}]]></dataSourceExpression>
+                <subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "sub1.jasper"]]></subreportExpression>
+            </subreport>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="2" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="2" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="23" splitType="Stretch">
+            <staticText>
+                <reportElement x="322" y="0" width="158" height="23" uuid="2b3252f4-b55f-451c-9c7f-897b364aef9a"/>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[*** END OF REPORT ***]]></text>
+            </staticText>
+        </band>
+    </summary>
+</jasperReport>

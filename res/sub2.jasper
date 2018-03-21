@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.4  -->
+<!-- 2015-08-21T14:03:25 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8392e054-83a8-48b1-b95e-3c40bf5a1143">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="totalPresented2" class="java.math.BigDecimal"/>
+    <parameter name="totalPending2" class="java.math.BigDecimal"/>
+    <parameter name="totalAccepted2" class="java.math.BigDecimal"/>
+    <parameter name="totalRejected2" class="java.math.BigDecimal"/>
+    <parameter name="totalError2" class="java.math.BigDecimal"/>
+    <field name="productType" class="java.lang.String"/>
+    <field name="presented" class="java.math.BigDecimal"/>
+    <field name="pending" class="java.math.BigDecimal"/>
+    <field name="accepted" class="java.math.BigDecimal"/>
+    <field name="rejected" class="java.math.BigDecimal"/>
+    <field name="error" class="java.math.BigDecimal"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="20" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="140" height="20" uuid="9b246e53-82ea-4726-a86a-d74a59e42797"/>
+                <text><![CDATA[Product Type]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="140" y="0" width="140" height="20" uuid="1809f9c9-a70c-4998-b582-f36c81518abf"/>
+                <text><![CDATA[Presented]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="280" y="0" width="100" height="20" uuid="08fea51b-0358-469a-8215-2fa192608884"/>
+                <text><![CDATA[Pending]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="380" y="0" width="100" height="20" uuid="19a9f495-f801-4019-821d-77b9e26de74e"/>
+                <text><![CDATA[Accepted]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="480" y="0" width="100" height="20" uuid="aad9f333-5254-4389-a7cc-41455b4a5c92"/>
+                <text><![CDATA[Rejected]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="580" y="0" width="100" height="20" uuid="27b14062-5dba-412f-81fb-60951d7edd83"/>
+                <text><![CDATA[Error]]></text>
+            </staticText>
+        </band>
+    </title>
+    <columnHeader>
+        <band height="2" splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="20" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="140" height="20" uuid="7d71429a-291e-4d2f-a35d-c4a0cc724009"/>
+                <textFieldExpression><![CDATA[$F{productType}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="140" y="0" width="140" height="20" uuid="cf1a29e2-490c-4e5f-be32-e131292daeb5"/>
+                <textFieldExpression><![CDATA[$F{presented}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="0" width="100" height="20" uuid="cf1a29e2-490c-4e5f-be32-e131292daeb5"/>
+                <textFieldExpression><![CDATA[$F{pending}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="0" width="100" height="20" uuid="cf1a29e2-490c-4e5f-be32-e131292daeb5"/>
+                <textFieldExpression><![CDATA[$F{accepted}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="480" y="0" width="100" height="20" uuid="cf1a29e2-490c-4e5f-be32-e131292daeb5"/>
+                <textFieldExpression><![CDATA[$F{rejected}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="580" y="0" width="100" height="20" uuid="cf1a29e2-490c-4e5f-be32-e131292daeb5"/>
+                <textFieldExpression><![CDATA[$F{error}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <summary>
+        <band height="20" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="140" height="20" uuid="df09d91c-970d-4014-bae0-e585058b132d"/>
+                <text><![CDATA[Total]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="140" y="0" width="140" height="20" uuid="ed974398-9a6d-45f8-a512-09a2082b47df"/>
+                <textFieldExpression><![CDATA[$P{totalPresented2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="0" width="100" height="20" uuid="4bbcae9e-f867-4e2c-abe2-da1fa26000bb"/>
+                <textFieldExpression><![CDATA[$P{totalPending2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="0" width="100" height="20" uuid="15351679-d011-460b-8067-259b3ef326dd"/>
+                <textFieldExpression><![CDATA[$P{totalAccepted2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="480" y="0" width="100" height="20" uuid="c92a203d-d038-4cad-b084-fc541e127e4b"/>
+                <textFieldExpression><![CDATA[$P{totalRejected2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="580" y="0" width="100" height="20" uuid="b9155d41-f983-43e2-95a2-11cc8dd0b9eb"/>
+                <textFieldExpression><![CDATA[$P{totalError2}]]></textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+</jasperReport>

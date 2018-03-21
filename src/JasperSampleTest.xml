@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperPrint xmlns="http://jasperreports.sourceforge.net/jasperreports/print" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/print http://jasperreports.sourceforge.net/xsd/jasperprint.xsd" name="basicholereport" pageWidth="595" pageHeight="842" topMargin="20" leftMargin="20" bottomMargin="20" rightMargin="20" locale="zh_CN" timezone="Asia/Shanghai">
+	<property name="net.sf.jasperreports.export.xml.start.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.end.page.index" value="1"/>
+	<property name="net.sf.jasperreports.export.xml.page.count" value="2"/>
+	<origin group="低危漏洞" band="groupHeader"/>
+	<origin group="低危漏洞" band="groupFooter"/>
+	<origin group="中危漏洞" band="groupHeader"/>
+	<origin group="中危漏洞" band="groupFooter"/>
+	<origin group="高危漏洞" band="groupHeader"/>
+	<origin group="高危漏洞" band="groupFooter"/>
+	<origin group="cve" band="groupHeader"/>
+	<origin group="cve" band="groupFooter"/>
+	<origin group="name" band="groupHeader"/>
+	<origin group="name" band="groupFooter"/>
+	<origin group="type" band="groupHeader"/>
+	<origin group="type" band="groupFooter"/>
+	<origin group="description" band="groupHeader"/>
+	<origin group="description" band="groupFooter"/>
+	<origin band="background"/>
+	<origin band="title"/>
+	<origin band="pageHeader"/>
+	<origin band="detail"/>
+	<origin band="pageFooter"/>
+	<origin band="summary"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="低危漏洞" band="groupHeader"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="低危漏洞" band="groupFooter"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="中危漏洞" band="groupHeader"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="中危漏洞" band="groupFooter"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="高危漏洞" band="groupHeader"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="高危漏洞" band="groupFooter"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="cve" band="groupHeader"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="cve" band="groupFooter"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="name" band="groupHeader"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="name" band="groupFooter"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="type" band="groupHeader"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="type" band="groupFooter"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="description" band="groupHeader"/>
+	<origin report="basicholereport_table_1520923499935_132115" group="description" band="groupFooter"/>
+	<origin report="basicholereport_table_1520923499935_132115" band="title"/>
+	<origin report="basicholereport_table_1520923499935_132115" band="columnHeader"/>
+	<origin report="basicholereport_table_1520923499935_132115" band="detail"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<page>
+		<frame>
+			<reportElement uuid="30ecaa5c-4b34-4d71-b268-c55df4a3c5ac" mode="Opaque" x="20" y="22" width="554" height="66" backcolor="#006699" origin="15" srcId="1" printId="1"/>
+			<text textHeight="0.0">
+				<reportElement uuid="a9ea0adb-c171-4836-8237-64e37e8b0996" x="22" y="11" width="234" height="43" forecolor="#FFFFFF" origin="15" srcId="2" printId="1"/>
+				<font fontName="华文仿宋" size="34" isBold="true"/>
+				<textContent><![CDATA[]]></textContent>
+			</text>
+		</frame>
+		<image scaleImage="RetainShape" hAlign="Left" vAlign="Top">
+			<reportElement uuid="4e54d288-730d-4cc3-8400-be49b706a88b" x="469" y="91" width="103" height="51" origin="16" srcId="3" printId="2"/>
+			<imageSource isEmbedded="true">
+				<![CDATA[/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCABPAI4DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9Uh0p
+aSloAb19qOKPTisrWtX/ALPWKGJfOu7g4iToBgZLMeygck/Qd6wqVI0o80thrUXWNetNFjBnYtKw
+zHDGAXfHXA9vU4FcZceIfEmu3OyyEekwOu6NSoknb1ZiQVRR9CSTxV620dZJPtcpa5numzLcSsFH
+ljnaGI4UnBwoA/nU5gMi3kyKsroSF+VpF2hcgFmIGM5PTissPiJSleSsjgxNOpUVk7I4660m5MzS
+y63qErxuVmkN2yx5xyERcDA7k5weBk1jyabc6er3EWqanZQls7ri+ldyDnBC5wuQRgEH8666Sxt0
+0MEW6RJsjZ/s8au5JILAhUJABJycnioNetQ9/bxEZkYP5cu4Mu4DqRwMgZAJ6c19JRrKSUWtD5mt
+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]]>
+			</imageSource>
+		</image>
+		<text textHeight="13.6875" lineSpacingFactor="1.140625" leadingOffset="-0.84375">
+			<reportElement uuid="04d075d2-56bd-4167-b994-a340d9ca5501" x="242" y="107" width="100" height="22" origin="16" srcId="4" printId="1"/>
+			<font fontName="仿宋" size="12" isBold="true"/>
+			<textContent><![CDATA[渗透测试报告]]></textContent>
+		</text>
+		<text textHeight="18.25" lineSpacingFactor="1.140625" leadingOffset="-1.125">
+			<reportElement uuid="41acba62-35b3-4474-be5e-4a0f85e42f17" x="26" y="149" width="98" height="30" origin="17" srcId="5" printId="1"/>
+			<font fontName="仿宋" size="16" isBold="true"/>
+			<textContent><![CDATA[第1章 概述]]></textContent>
+		</text>
+		<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+			<reportElement uuid="28904d05-0953-4441-9d43-c8f1e81fccb2" x="40" y="185" width="94" height="14" origin="17" srcId="6" printId="1"/>
+			<font fontName="仿宋" isBold="true"/>
+			<textContent><![CDATA[1.1测试目的]]></textContent>
+		</text>
+		<text textHeight="22.8125" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+			<reportElement uuid="6185cce5-ec56-4f8a-a295-6c1c27a70506" x="42" y="199" width="508" height="37" origin="17" srcId="7" printId="1"/>
+			<font fontName="仿宋" size="10" isBold="true"/>
+			<textContent><![CDATA[通过对上海通用的主机系统进行安全性评估，可以了解到其外网主机系统当前的安全现状及其面临的安全威胁，并及时发现存在的技术性安全弱点，作为下一阶段安全加固工作的重要依据。]]></textContent>
+		</text>
+		<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+			<reportElement uuid="eae566e6-7917-473e-9df4-e63dd547585d" x="39" y="237" width="94" height="14" origin="17" srcId="8" printId="1"/>
+			<font fontName="仿宋" isBold="true"/>
+			<textContent><![CDATA[1.3参考标准]]></textContent>
+		</text>
+		<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+			<reportElement uuid="24b57cd5-454b-4d5b-8aaf-4330c1334d80" x="43" y="256" width="228" height="18" origin="17" srcId="9" printId="1"/>
+			<font fontName="仿宋" isBold="true"/>
+			<textContent><![CDATA[《上海通用安全管理标准》]]></textContent>
+		</text>
+		<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+			<reportElement uuid="50b86457-82de-46d0-b13f-cb2d5ebe5037" x="39" y="276" width="94" height="14" origin="17" srcId="10" printId="1"/>
+			<font fontName="仿宋" isBold="true"/>
+			<textContent><![CDATA[1.3评估内容]]></textContent>
+		</text>
+		<text textHeight="22.8125" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+			<reportElement uuid="136440f3-ff30-43c7-8f17-09ee3d4841be" x="51" y="293" width="419" height="30" origin="17" srcId="11" printId="1"/>
+			<font fontName="仿宋"/>
+			<textContent><![CDATA[以下是本次主机系统评估的具体范围，共248台。其中内网主机126台，外网映射主机122台。详细见下表：
+]]></textContent>
+		</text>
+		<image scaleImage="RetainShape" hAlign="Left" vAlign="Top">
+			<reportElement uuid="07bc381f-b319-4d65-b052-2de9936bc2c9" x="80" y="326" width="469" height="66" origin="17" srcId="12" printId="2"/>
+			<imageSource isEmbedded="true">
+				<![CDATA[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]]>
+			</imageSource>
+		</image>
+		<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+			<reportElement uuid="f53bb9c2-f28d-4a13-83a8-2fee276312e7" x="39" y="399" width="110" height="14" origin="17" srcId="13" printId="1"/>
+			<font fontName="仿宋" isBold="true"/>
+			<textContent><![CDATA[1.4.风险赋值参照标准]]></textContent>
+		</text>
+		<text textHeight="68.4375" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+			<reportElement uuid="bda9edfd-647f-4b35-a935-876442cfae65" x="50" y="416" width="440" height="70" origin="17" srcId="14" printId="1"/>
+			<font fontName="仿宋" isBold="true"/>
+			<textContent><![CDATA[     安全风险与信息资产密切相关，在一定条件或环境下可能被威胁利用，从而造成资产损失。风险的出现有各种原因，如软件开发过程中的质量问题，系统管理员的配置问题以及安全管理方面的问题，它们的共同特性就是给攻击者提供了对信息资产进行攻击的机会。
+参照国际通行标准和经验，我们在本次评估中将资产存在的风险赋值分为3个等级，分别是高、中、低，如下表所示：
+]]></textContent>
+		</text>
+		<frame>
+			<reportElement uuid="dc56233e-56d6-46b5-90b7-e09d5f434ec7" x="50" y="496" width="440" height="189" origin="17" srcId="15" printId="1"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+			<line direction="BottomUp">
+				<reportElement uuid="732b3001-5fc5-4938-aa02-bae656de5b11" x="-1" y="28" width="440" height="1" origin="17" srcId="16" printId="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement uuid="355457ad-815a-4e9b-910e-9d1cc7934ecf" x="0" y="59" width="440" height="1" origin="17" srcId="17" printId="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement uuid="a1dae176-58d5-405b-868f-d1d523578ca1" x="0" y="91" width="440" height="1" origin="17" srcId="18" printId="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement uuid="fb6254d2-533b-4a91-9f9b-28d30040dca1" x="0" y="122" width="440" height="1" origin="17" srcId="19" printId="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement uuid="c63b1dde-2da3-4025-a2c6-31377fce7462" x="0" y="153" width="440" height="1" origin="17" srcId="20" printId="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="1d7f9f8e-7a12-419b-8f61-ccb5b516df5d" x="109" y="-1" width="1" height="189" origin="17" srcId="21" printId="1"/>
+			</line>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="0263c078-e029-42ab-9b2f-5d6703c7927e" x="1" y="5" width="115" height="22" origin="17" srcId="22" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[赋值]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="17d241af-9eb6-4883-b81b-a2af7926b8c8" x="146" y="4" width="254" height="22" origin="17" srcId="23" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[说明（当该弱点被威胁利用时引起的后果）]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="22f57ecb-c55c-46d5-b2bf-c2019fb9d5d3" x="1" y="33" width="115" height="22" origin="17" srcId="24" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[高]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="c3a739da-f081-4316-aca8-ffc8369a5dd4" x="1" y="65" width="115" height="22" origin="17" srcId="25" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[中]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="a6f5a5e7-38d1-4210-918a-57a48468c4e5" x="1" y="96" width="115" height="22" origin="17" srcId="26" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[低]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="6c6f76ac-fbd9-4acc-9369-fd3ad269d82e" x="2" y="128" width="115" height="22" origin="17" srcId="27" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[符合]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="0c0549a4-04c7-4a65-89cf-0c4a7f497d43" x="1" y="158" width="115" height="22" origin="17" srcId="28" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[说明]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="20c7d096-9b99-4fc6-94c1-ccdf7bebbc21" x="109" y="34" width="330" height="22" origin="17" srcId="29" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[企业信息资产重大损失或直接导致业务活动大范围中断，影响范围较广]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="243abcfc-ec6c-4b76-b627-01deff1036cb" x="116" y="65" width="322" height="22" origin="17" srcId="30" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[企业信息资产一般损失或直接影响业务活动，或局部业务活动的中断]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="28c9ff69-4488-4e6f-a3fc-50754d3edcd7" x="117" y="97" width="322" height="22" origin="17" srcId="31" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[企业信息-资产损失很小或间接影响业务活动的连续性]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="13de09b4-5caa-47ec-a460-9ea383145d78" x="118" y="127" width="322" height="22" origin="17" srcId="32" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[企业信息资产无损失，且可以满足安全要求]]></textContent>
+			</text>
+			<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+				<reportElement uuid="cbfc841b-e02a-4788-857d-f705462e442c" x="117" y="158" width="322" height="22" origin="17" srcId="33" printId="1"/>
+				<font fontName="仿宋" isBold="true"/>
+				<textContent><![CDATA[信息资产损失包括：信息被窃取、信息被篡改]]></textContent>
+			</text>
+		</frame>
+		<text textHeight="18.25" lineSpacingFactor="1.140625" leadingOffset="-1.125">
+			<reportElement uuid="acac2ac9-b69e-4148-8c4b-5d512faad941" x="29" y="695" width="166" height="30" origin="17" srcId="34" printId="1"/>
+			<font fontName="仿宋" size="16" isBold="true"/>
+			<textContent><![CDATA[第2章 扫描结果分析]]></textContent>
+		</text>
+		<text textHeight="11.40625" lineSpacingFactor="1.140625" leadingOffset="-0.703125">
+			<reportElement uuid="2400358b-866f-4c8a-827f-ff26873a28df" x="52" y="730" width="110" height="14" origin="17" srcId="35" printId="1"/>
+			<font fontName="仿宋" isBold="true"/>
+			<textContent><![CDATA[2.1.扫描结果综述]]></textContent>
+		</text>
+	</page>
+	<page>
+		<image scaleImage="RetainShape" hAlign="Left" vAlign="Top">
+			<reportElement uuid="4e54d288-730d-4cc3-8400-be49b706a88b" x="469" y="19" width="103" height="51" origin="16" srcId="3" printId="3"/>
+			<imageSource isEmbedded="true">
+				<![CDATA[/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCABPAI4DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9Uh0p
+aSloAb19qOKPTisrWtX/ALPWKGJfOu7g4iToBgZLMeygck/Qd6wqVI0o80thrUXWNetNFjBnYtKw
+zHDGAXfHXA9vU4FcZceIfEmu3OyyEekwOu6NSoknb1ZiQVRR9CSTxV620dZJPtcpa5numzLcSsFH
+ljnaGI4UnBwoA/nU5gMi3kyKsroSF+VpF2hcgFmIGM5PTissPiJSleSsjgxNOpUVk7I4660m5MzS
+y63qErxuVmkN2yx5xyERcDA7k5weBk1jyabc6er3EWqanZQls7ri+ldyDnBC5wuQRgEH8666Sxt0
+0MEW6RJsjZ/s8au5JILAhUJABJycnioNetQ9/bxEZkYP5cu4Mu4DqRwMgZAJ6c19JRrKSUWtD5mt
+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]]>
+			</imageSource>
+		</image>
+		<text textHeight="13.6875" lineSpacingFactor="1.140625" leadingOffset="-0.84375">
+			<reportElement uuid="04d075d2-56bd-4167-b994-a340d9ca5501" x="242" y="35" width="100" height="22" origin="16" srcId="4" printId="2"/>
+			<font fontName="仿宋" size="12" isBold="true"/>
+			<textContent><![CDATA[渗透测试报告]]></textContent>
+		</text>
+		<image>
+			<reportElement uuid="5ce3e4c9-0284-4bfe-b688-d942868c53e2" x="159" y="74" width="200" height="200" origin="17" srcId="36" printId="1"/>
+			<graphicElement fill="Solid">
+				<pen lineWidth="0.0"/>
+			</graphicElement>
+			<imageSource isEmbedded="true">
+				<![CDATA[iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAFKUlEQVR42u3dsWtdZRjA4YMEx4I4
+hSBC6SBFQqBIKaVUoRQHEeniIOIQEGcROrgo/gfSzcHBQXAQEQeXkqFDKZQiUooUigSRIAURkRBK
+4fp95Lv0EMnJe2Ms9nufB15yjvfSQfLj3BPuyxkGAACAPGb+F4BAQCAgEBAICAT+E8fLbO3z2utl
+/ijzoMxP7VwgpHG5zI2JX+yrZd5ox2+V+VYgZLJe5qmJX+y/2utD+/nnRBiztbW12cbGxkdlXq7/
+sf507vxxnj/ue4eHe84fuILg5vqR7eAVRCCkDOT70Y35a+2eRCCkD2R+fqndh9Tz31skAoEjvhIB
+AgGBgEBAICAQEAgIBAQCAgGBwBMtsi14ssytMjvD7hcXlwVCFpFtwZtlzrbjF8t8LRCyiGwL7l2Q
+2p4Iw0ah8642CiPbgj+WWW3H7ww2Ckkksi14qt2f1HuQj8vcFwhZRLYF75Y5PXrPFYGQxdS24PwX
+/UKZzXYF+bLMMYHA4QkEBAICAYGAQEAgIBAQCAgEBAIIhC5FNgrrd7HutPfcLnNeIGQR2SisX29/
+vh3Xn78IhCwiG4X3yqy045V2vl8YNgqdp9sorB+xtlsA2+3cFYQUIhuFdRdkefQRa1MgZBHZKPy1
+zHOjj1hWbkkjslH4yrD71yt/xYIjIBAQCAgEBAICAYGAQEAgIBAQCDy5IgtTsz3zUCBkEVmYGnu/
+zNsCIYvIwtTcxTKf+4hFJpGFqWpp2N1Lf/aAMGwUOu9qozCyMFWtl/nUTTrZRBamqu+Gg1dtBUJ3
+IgtT8yvNkkDg3xMICAQEAgIBgYBAQCAgEBAICAQQCF2KbBQ+U+abMjtlfh48H4REIhuFV0bh1Dju
+CYQsIhuFv5X5ZNj9Rm+N45RAyCKyUVjf8247Plnm1kQYNgqdp9so3A5E5ApClyIbhV+1+5Nqtcx1
+gZBFZKOwPsBzo1056serFwQChycQEAgIBAQCAgGBgEBAICAQEAggELoU2ShcHv75nEKBkEJko/DN
+If7wHIHQlchGYX0u4bVhdy+kPoZtTSBkEdkovFvmTDteaZHsF4aNQucpn1E4tuMKQhaRjcJ6BTkx
+uoJcFQhZRDYKz7SPVQ/avciKQODwBAICAYGAQEAgIBAQCAgEBAICAQRClyIbhWMfDjYKSSSyUTiO
+4z2BkElko3AcxyAQMolsFI7jmArARqHzlBuFs33GFYTuRTYKFw1AIHQjslEoEDhCAgGBgEBAICAQ
+EAgIBAQCAgGBAAKhS5GNwtUyN9t7bpc5LxCyiGwU1iguteNzZe4LhCyiG4Xz1+u3fe8IhCwiG4XV
+0vDoa/EfTIRho9B56mcU1vsRzygkjegzClfb8fEymwIhi8hG4el2o14/ftW/Zr0kEDg8gYBAQCAg
+EBAICAQEAgIBgYBAAIHQpchG4dkyP7T31C8uXhQIWUQ2CmsU59pxjWNLIGSxyEZhdWzwdXcSiW4U
+zn0x8RHLRqHztBuFT5f5rMyrbtLJJLJReKHMtTIngv+mQOhGZKNwc4g/4VYgIBAQCAgEBAICAYGA
+QEAgIBBAICAQMopsFM7VRx9sCYRMIhuF1eUyN4K//AKhG9GNwvX2ukBIZdGNwtkBr9kodJ76GYWu
+IKQS2SgUCGlFNgoFAkdIICAQEAgIBAQCAgGBgEBAICAQQCB0KbJRuMjWoUDoSmSjMLp1KBC6E9ko
+XPQ5hgKhG5GNwujW4cyY/9EcichG4aJbh9CNyEbholuH0I3IRuHUewAAAIAJfwNuiug6MHesGwAA
+AABJRU5ErkJggg==]]>
+			</imageSource>
+		</image>
+		<text textHeight="13.002853" lineSpacingFactor="1.3002853" leadingOffset="-3.1482697">
+			<reportElement uuid="a7e55f1f-51a2-4631-9f46-8880323f1b7d" x="53" y="288" width="110" height="14" origin="17" srcId="37" printId="1"/>
+			<font fontName="华文仿宋" isBold="true"/>
+			<textContent><![CDATA[2.1.结果详情漏洞]]></textContent>
+		</text>
+		<frame>
+			<reportElement uuid="dc664d68-2cf5-4fe3-a741-e820bb7171d6" x="74" y="324" width="420" height="0" origin="17" srcId="38" printId="2">
+				<property name="net.sf.jasperreports.export.headertoolbar.tableUUID" value="dc664d68-2cf5-4fe3-a741-e820bb7171d6"/>
+			</reportElement>
+		</frame>
+	</page>
+</jasperPrint>

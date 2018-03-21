@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.4  -->
+<!-- 2015-08-21T14:03:19 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub2" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d1debb0f-5c0a-48aa-a93a-187757ae91dd">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="totalPresented1" class="java.math.BigDecimal"/>
+    <parameter name="totalPending1" class="java.math.BigDecimal"/>
+    <parameter name="totalAccepted1" class="java.math.BigDecimal"/>
+    <parameter name="totalRejected1" class="java.math.BigDecimal"/>
+    <parameter name="totalError1" class="java.math.BigDecimal"/>
+    <field name="channel" class="java.lang.String"/>
+    <field name="customerGroup" class="java.lang.String"/>
+    <field name="presented" class="java.math.BigDecimal"/>
+    <field name="pending" class="java.math.BigDecimal"/>
+    <field name="accepted" class="java.math.BigDecimal"/>
+    <field name="rejected" class="java.math.BigDecimal"/>
+    <field name="error" class="java.math.BigDecimal"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="20" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="140" height="20" uuid="1690f038-e5f1-4132-b706-c911aae641b7"/>
+                <text><![CDATA[Channel]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="140" y="0" width="140" height="20" uuid="519c4dda-1400-4f30-8a4e-b65cd1160ae6"/>
+                <text><![CDATA[Customer Group]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="280" y="0" width="100" height="20" uuid="cba100cf-b80b-4022-aac8-198b2075eed3"/>
+                <text><![CDATA[Presented]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="380" y="0" width="100" height="20" uuid="a7de3d30-b00c-42f7-979b-54b74ff44826"/>
+                <text><![CDATA[Pending]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="480" y="0" width="100" height="20" uuid="3b864709-94aa-4c63-8652-f96aa933d76e"/>
+                <text><![CDATA[Accepted]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="580" y="0" width="100" height="20" uuid="9362560f-6a19-48fc-875c-26a2fd9b98f8"/>
+                <text><![CDATA[Rejected]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="680" y="0" width="100" height="20" uuid="e2666412-78ef-435e-b8c6-72d44508249b"/>
+                <text><![CDATA[Error]]></text>
+            </staticText>
+        </band>
+    </title>
+    <columnHeader>
+        <band height="2" splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="20" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="140" height="20" uuid="85584127-02e5-4da2-b47b-350c8b14e9a4"/>
+                <textFieldExpression><![CDATA[$F{channel}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="140" y="0" width="140" height="20" uuid="5b31982b-0592-4673-a35e-34a7b6a07019"/>
+                <textFieldExpression><![CDATA[$F{customerGroup}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="0" width="100" height="20" uuid="9f9c54db-08ce-4ffc-b25d-736eda2fc8c8"/>
+                <textFieldExpression><![CDATA[$F{presented}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="0" width="100" height="20" uuid="c4e844a8-2d48-478c-9265-4b1280dee581"/>
+                <textFieldExpression><![CDATA[$F{pending}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="480" y="0" width="100" height="20" uuid="592114d8-df5c-4e06-ac85-f074093bcd03"/>
+                <textFieldExpression><![CDATA[$F{accepted}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="580" y="0" width="100" height="20" uuid="b4d5d370-c299-4de5-a13d-5661563e6f08"/>
+                <textFieldExpression><![CDATA[$F{rejected}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="680" y="0" width="100" height="20" uuid="66e08821-bf23-4001-9c20-afb657164dbb"/>
+                <textFieldExpression><![CDATA[$F{error}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <summary>
+        <band height="20" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="140" height="20" uuid="51bc79c0-9dfe-45f7-a177-227563ab8d4c"/>
+                <text><![CDATA[Total]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="280" y="0" width="100" height="20" uuid="b6edaf65-05e4-458f-9672-1e2526e7f462"/>
+                <textFieldExpression><![CDATA[$P{totalPresented1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="0" width="100" height="20" uuid="841b4a18-0b16-40f9-8bf4-7cda720720e9"/>
+                <textFieldExpression><![CDATA[$P{totalPending1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="480" y="0" width="100" height="20" uuid="8ebb4d0d-1292-40b0-9153-1baac2cf4fc7"/>
+                <textFieldExpression><![CDATA[$P{totalAccepted1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="580" y="0" width="100" height="20" uuid="698a324f-3f94-4299-919c-05cfda3d2cb7"/>
+                <textFieldExpression><![CDATA[$P{totalRejected1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="680" y="0" width="100" height="20" uuid="28e2c6c6-3eb9-4a93-ad50-6019cdd8c84e"/>
+                <textFieldExpression><![CDATA[$P{totalError1}]]></textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+</jasperReport>
